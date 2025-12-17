@@ -1,0 +1,46 @@
+.dark {
+    /* ========== Primary (dark tweaks) ========== */
+    --color-primary-a10: #de74fd;
+    --color-primary-a20: #e487fe;
+    --color-primary-a30: #e999fe;
+    --color-primary-a40: #eeabff;
+    --color-primary-a50: #f2bcff;
+
+    /* ========== Surface (dark) ========== */
+    --color-surface-a0: #121212;
+    --color-surface-a03: #1b1b1b;
+    --color-surface-a05: #212121;
+    --color-surface-a07: #262626;
+    --color-surface-a10: #282828;
+    --color-surface-a20: #3f3f3f;
+    --color-surface-a30: #575757;
+    --color-surface-a40: #717171;
+    --color-surface-a50: #8b8b8b;
+
+    /* ========== Surface Tonal (dark) ========== */
+    --color-surface-tonal-a0: #231b26;
+    --color-surface-tonal-a03: #2b232e;
+    --color-surface-tonal-a05: #302833;
+    --color-surface-tonal-a07: #352d37;
+    --color-surface-tonal-a10: #38303a;
+    --color-surface-tonal-a20: #4e4650;
+    --color-surface-tonal-a30: #645e67;
+    --color-surface-tonal-a40: #7c777e;
+    --color-surface-tonal-a50: #959097;
+
+    /* ========== Status: Success (dark) ========== */
+    --color-success-a0: #4cd964;
+    --color-success-a10: #66e07a;
+    --color-success-a20: #7fe790;
+    --color-success-a30: #98eea6;
+    --color-success-a40: #b1f5bc;
+    --color-success-a50: #cbfccf;
+
+    /* ========== Status: Danger (dark) ========== */
+    --color-danger-a0: #ff4d4f;
+    --color-danger-a10: #ff6668;
+    --color-danger-a20: #ff7f81;
+    --color-danger-a30: #ff999a;
+    --color-danger-a40: #ffb2b3;
+    --color-danger-a50: #ffcccc;
+}

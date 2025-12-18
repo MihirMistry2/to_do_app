@@ -27,10 +27,7 @@
         /* Paths */
         "baseUrl": "./src",
         "paths": {
-            "@components/*": ["components/*"],
-            "@constants/*": ["constants/*"],
-            "@utils/*": ["utils/*"],
-            "@styles/*": ["styles/*"]
+            "@/*": ["*"]
         }
     },
     "include": ["src"]

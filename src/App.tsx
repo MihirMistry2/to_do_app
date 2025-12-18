@@ -4,12 +4,12 @@ import AppLayout from '@/components/layout/AppLayout';
 import Header from '@/components/layout/Header';
 
 const App = () => {
-    const [Search, setSearch] = useState<string>('');
+    const [search, setSearch] = useState('');
 
     return (
         <>
             <AppLayout>
-                <Header search={Search} setSearch={setSearch} />
+                <Header search={search} setSearch={setSearch} />
             </AppLayout>
         </>
     );

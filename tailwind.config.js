@@ -49,10 +49,6 @@ export default {
                     a30: 'var(--color-danger-a30)',
                     a50: 'var(--color-danger-a50)',
                 },
-                base: {
-                    dark: 'var(--color-dark-a0)',
-                    light: 'var(--color-light-a0)',
-                },
             },
             fontSize: {
                 fluid: 'clamp(0.75rem, 0.9rem - 0.125vw, 0.875rem)',

@@ -4,9 +4,6 @@
 /* Custom Tailwind "dark" variant targeting .dark class and its descendants */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Design Tokens */
-@import '@/styles/tokens/constants.css';
-
 /* Themes */
 @import '@/styles/themes/base.css';
 @import '@/styles/themes/dark.css';

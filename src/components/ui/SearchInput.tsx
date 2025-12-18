@@ -13,7 +13,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
     return (
         <div className="relative w-full">
             <input
-                className="border-surface-tonal-a10 bg-surface-tonal-a10 placeholder:text-surface-tonal-a50 focus:border-surface-tonal-a30 text-base-dark dark:text-base-light h-10 w-full rounded-full border pr-4 pl-10 outline-none md:h-8"
+                className="border-surface-tonal-a10 bg-surface-tonal-a10 placeholder:text-surface-tonal-a50 focus:border-surface-tonal-a30 h-10 w-full rounded-full border pr-4 pl-10 text-black outline-none md:h-8 dark:text-white"
                 type="search"
                 name="search"
                 id="search"

@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import type { IconButtonProps } from '@/types/index';
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -8,7 +10,11 @@ const IconButton: React.FC<IconButtonProps> = ({
     ...props
 }) => {
     return (
-        <button type="button" className={className} {...props}>
+        <button
+            type="button"
+            className={clsx('cursor-pointer', className)}
+            {...props}
+        >
             <Icon className={iconClassName} aria-hidden />
             {children}
         </button>

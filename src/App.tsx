@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import AppLayout from '@/components/layout/AppLayout';
 import Header from '@/components/layout/Header';
+import TodoAdd from '@/components/todo/TodoAdd';
 
 const App = () => {
     const [search, setSearch] = useState('');
@@ -15,6 +16,9 @@ const App = () => {
                     setSearch={setSearch}
                     setIsAddTodoOpen={setIsAddTodoOpen}
                 />
+                {isAddTodoOpen && (
+                    <TodoAdd setIsAddTodoOpen={setIsAddTodoOpen} />
+                )}
             </AppLayout>
         </>
     );

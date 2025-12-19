@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes } from 'react';
+import type { ButtonHTMLAttributes, Dispatch, SetStateAction } from 'react';
 import type { IconType } from 'react-icons';
 
 export interface AppLayoutProps {
@@ -7,13 +7,13 @@ export interface AppLayoutProps {
 
 export interface HeaderProps {
     search: string;
-    setSearch: (search: string) => void;
-    setIsAddTodoOpen: (value: boolean) => void;
+    setSearch: Dispatch<SetStateAction<string>>;
+    setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface SearchInputProps {
     search: string;
-    setSearch: (search: string) => void;
+    setSearch: Dispatch<SetStateAction<string>>;
 }
 
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,4 +21,8 @@ export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
     iconClassName?: string;
     children?: React.ReactNode;
     className?: string;
+}
+
+export interface TodoAddProps {
+    setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
 }

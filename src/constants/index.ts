@@ -1,3 +1,15 @@
-export const FILTERS = ['all', 'completed', 'pending'] as const;
+export const Filter = {
+    All: 'all',
+    Completed: 'completed',
+    Pending: 'pending',
+} as const;
 
-export type FilterType = (typeof FILTERS)[number];
+export const FILTER_INDEX = Object.values(Filter).reduce(
+    (acc, filter, index) => {
+        acc[filter] = index;
+        return acc;
+    },
+    {} as Record<string, number>,
+);
+
+export const FILTERS = Object.values(Filter);

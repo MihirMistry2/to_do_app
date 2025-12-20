@@ -1,6 +1,8 @@
 import type { ButtonHTMLAttributes, Dispatch, SetStateAction } from 'react';
 import type { IconType } from 'react-icons';
 
+import type { Filter } from '@/types/filter';
+
 export interface AppLayoutProps {
     children: React.ReactNode;
 }
@@ -9,6 +11,13 @@ export interface HeaderProps {
     search: string;
     setSearch: Dispatch<SetStateAction<string>>;
     setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface MainProps {
+    activeFilter: Filter;
+    setActiveFilter: Dispatch<React.SetStateAction<Filter>>;
+    isAddTodoOpen: boolean;
+    setIsAddTodoOpen: Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface SearchInputProps {

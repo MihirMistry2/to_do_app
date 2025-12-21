@@ -1,16 +1,14 @@
-import type { ButtonHTMLAttributes, Dispatch, SetStateAction } from 'react';
-import type { IconType } from 'react-icons';
+import type { Dispatch, SetStateAction } from 'react';
 
 import type { FilterType as Filter } from '@/constants';
 
-export interface AppLayoutProps {
-    children: React.ReactNode;
-}
+export const TODOS_STORAGE_KEY = 'todos';
 
-export interface HeaderProps {
-    search: string;
-    setSearch: Dispatch<SetStateAction<string>>;
-    setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
+export interface Todo {
+    readonly id: string;
+    title: string;
+    completed: boolean;
+    readonly createdAt: number;
 }
 
 export interface MainProps {
@@ -20,24 +18,19 @@ export interface MainProps {
     setIsAddTodoOpen: Dispatch<React.SetStateAction<boolean>>;
 }
 
-export interface SearchInputProps {
-    search: string;
-    setSearch: Dispatch<SetStateAction<string>>;
-}
-
-export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    icon: IconType;
-    iconClassName?: string;
-    children?: React.ReactNode;
-    className?: string;
-}
-
 export interface TodoAddProps {
     isAddTodoOpen: boolean;
     setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export interface EmptyStateProps {
-    title: string;
-    description: string;
+export interface TodoContainerProps {
+    activeFilter: Filter;
+    isAddTodoOpen: boolean;
+}
+
+export interface TodoListProps {
+    isAddTodoOpen: boolean;
+    todos: Todo[];
+    toggleTodo: (id: string) => void;
+    deleteTodo: (id: string) => void;
 }

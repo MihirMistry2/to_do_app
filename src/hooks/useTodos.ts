@@ -14,6 +14,15 @@ const loadTodos = (): Todo[] => {
 const useTodos = () => {
     const [todos, setTodos] = useState<Todo[]>(loadTodos);
 
+    const generateId = (): string => {
+        if (crypto?.randomUUID) return crypto.randomUUID();
+
+        return (
+            Math.random().toString(36).substring(2, 10) +
+            Date.now().toString(36)
+        );
+    };
+
     useEffect(() => {
         localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos));
     }, [todos]);
@@ -21,7 +30,7 @@ const useTodos = () => {
     const addTodo = (title: string) => {
         setTodos(prev => [
             {
-                id: crypto.randomUUID(),
+                id: generateId(),
                 title,
                 completed: false,
                 createdAt: Date.now(),

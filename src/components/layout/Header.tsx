@@ -1,8 +1,8 @@
 import { FaPlus } from 'react-icons/fa6';
 
-import ToggleTheme from '@/components/ui/ToggleTheme';
-import SearchInput from '@/components/ui/SearchInput';
 import IconButton from '@/components/ui/IconButton';
+import SearchInput from '@/components/ui/SearchInput';
+import ToggleTheme from '@/components/ui/ToggleTheme';
 
 import type { HeaderProps } from '@/types';
 

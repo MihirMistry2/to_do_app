@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 
-import type { TodoListProps } from '@/types';
-
 import TodoItem from '@/components/todo/TodoItem';
+
+import type { TodoListProps } from '@/types';
 
 const TodoList: React.FC<TodoListProps> = ({
     isAddTodoOpen,

@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
-import { FaPlus, FaXmark, FaCheck } from 'react-icons/fa6';
+import { useRef } from 'react';
+import { FaCheck, FaPlus, FaXmark } from 'react-icons/fa6';
+
+import IconButton from '@/components/ui/IconButton';
 
 import type { TodoAddProps } from '@/types';
-import IconButton from '@/components/ui/IconButton';
 
 const TodoAdd: React.FC<TodoAddProps> = ({
     isAddTodoOpen,

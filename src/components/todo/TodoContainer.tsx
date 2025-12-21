@@ -1,8 +1,9 @@
 import { EMPTY_STATE_CONTENT } from '@/constants';
-import type { TodoContainerProps, Todo } from '@/types';
 
-import TodoList from '@/components/todo/TodoList';
 import EmptyState from '@/components/todo/EmptyState';
+import TodoList from '@/components/todo/TodoList';
+
+import type { Todo, TodoContainerProps } from '@/types';
 
 const TodoContainer: React.FC<TodoContainerProps> = ({
     activeFilter,

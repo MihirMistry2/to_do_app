@@ -1,10 +1,10 @@
 import useTodos from '@/hooks/useTodos';
 
-import type { MainProps } from '@/types';
-
-import TodoFilters from '@/components/todo/TodoFilters';
 import TodoAdd from '@/components/todo/TodoAdd';
 import TodoContainer from '@/components/todo/TodoContainer';
+import TodoFilters from '@/components/todo/TodoFilters';
+
+import type { MainProps } from '@/types';
 
 const Main: React.FC<MainProps> = ({
     activeFilter,

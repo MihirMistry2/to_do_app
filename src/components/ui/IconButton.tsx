@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import type { IconButtonProps } from '@/types/index';
+import type { IconButtonProps } from '@/types';
 
 const IconButton: React.FC<IconButtonProps> = ({
     icon: Icon,

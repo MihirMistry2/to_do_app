@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import type { DarkModeProps } from '@/types/index';
+import type { DarkModeProps } from '@/types';
 
 const useDarkMode = (): DarkModeProps => {
     const [darkMode, setDarkMode] = useState<boolean>(() => {

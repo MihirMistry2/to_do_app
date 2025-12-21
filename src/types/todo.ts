@@ -21,11 +21,15 @@ export interface MainProps {
 export interface TodoAddProps {
     isAddTodoOpen: boolean;
     setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
+    addTodo: (title: string) => void;
 }
 
 export interface TodoContainerProps {
     activeFilter: Filter;
     isAddTodoOpen: boolean;
+    todos: Todo[];
+    toggleTodo: (id: string) => void;
+    deleteTodo: (id: string) => void;
 }
 
 export interface TodoListProps {

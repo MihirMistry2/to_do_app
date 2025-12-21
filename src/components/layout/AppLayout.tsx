@@ -1,4 +1,4 @@
-import type { AppLayoutProps } from '@/types/index';
+import type { AppLayoutProps } from '@/types';
 
 const AppLayout: React.FC<AppLayoutProps> = ({
     children,

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import type { TodoFiltersProps } from '@/types/filter';
+import type { TodoFiltersProps } from '@/types';
 import { FILTERS, FILTER_INDEX } from '@/constants';
 
 const TodoFilters: React.FC<TodoFiltersProps> = ({

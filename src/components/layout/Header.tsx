@@ -4,7 +4,7 @@ import ToggleTheme from '@/components/ui/ToggleTheme';
 import SearchInput from '@/components/ui/SearchInput';
 import IconButton from '@/components/ui/IconButton';
 
-import type { HeaderProps } from '@/types/todo';
+import type { HeaderProps } from '@/types';
 
 const Header: React.FC<HeaderProps> = ({
     search,

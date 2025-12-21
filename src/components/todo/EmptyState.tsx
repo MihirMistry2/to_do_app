@@ -1,6 +1,6 @@
 import { FaRegClipboard } from 'react-icons/fa6';
 
-import type { EmptyStateProps } from '@/types/todo';
+import type { EmptyStateProps } from '@/types';
 
 const EmptyState: React.FC<EmptyStateProps> = ({
     title,

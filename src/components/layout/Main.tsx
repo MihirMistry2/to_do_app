@@ -1,10 +1,10 @@
-import type { MainProps } from '@/types/todo';
+import useTodos from '@/hooks/useTodos';
 
-import { EMPTY_STATE_CONTENT } from '@/constants';
+import type { MainProps } from '@/types';
 
 import TodoFilters from '@/components/todo/TodoFilters';
 import TodoAdd from '@/components/todo/TodoAdd';
-import EmptyState from '@/components/todo/EmptyState';
+import TodoContainer from '@/components/todo/TodoContainer';
 
 const Main: React.FC<MainProps> = ({
     activeFilter,
@@ -12,7 +12,7 @@ const Main: React.FC<MainProps> = ({
     isAddTodoOpen,
     setIsAddTodoOpen,
 }): React.ReactElement => {
-    const { title, description } = EMPTY_STATE_CONTENT[activeFilter];
+    const { todos, addTodo, toggleTodo, deleteTodo } = useTodos();
 
     return (
         <main className="flex h-full flex-1 flex-col gap-y-6 overflow-hidden">
@@ -23,8 +23,15 @@ const Main: React.FC<MainProps> = ({
             <TodoAdd
                 isAddTodoOpen={isAddTodoOpen}
                 setIsAddTodoOpen={setIsAddTodoOpen}
+                addTodo={addTodo}
             />
-            <EmptyState title={title} description={description} />
+            <TodoContainer
+                activeFilter={activeFilter}
+                isAddTodoOpen={isAddTodoOpen}
+                todos={todos}
+                toggleTodo={toggleTodo}
+                deleteTodo={deleteTodo}
+            />
         </main>
     );
 };

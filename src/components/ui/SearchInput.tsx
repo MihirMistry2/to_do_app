@@ -1,6 +1,6 @@
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 
-import type { SearchInputProps } from '@/types/todo';
+import type { SearchInputProps } from '@/types';
 
 const SearchInput: React.FC<SearchInputProps> = ({
     search,

@@ -1,6 +1,4 @@
-import { Filter as FILTER } from '@/constants';
-
-export type Filter = (typeof FILTER)[keyof typeof FILTER];
+import { type FilterType as Filter } from '@/constants';
 
 export interface TodoFiltersProps {
     activeFilter: Filter;

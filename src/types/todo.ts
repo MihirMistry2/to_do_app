@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, Dispatch, SetStateAction } from 'react';
 import type { IconType } from 'react-icons';
 
-import type { Filter } from '@/types/filter';
+import type { FilterType as Filter } from '@/constants';
 
 export interface AppLayoutProps {
     children: React.ReactNode;
@@ -33,5 +33,11 @@ export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 export interface TodoAddProps {
+    isAddTodoOpen: boolean;
     setIsAddTodoOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface EmptyStateProps {
+    title: string;
+    description: string;
 }

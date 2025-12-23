@@ -35,11 +35,20 @@ export default {
                     a40: 'var(--color-surface-tonal-a40)',
                     a50: 'var(--color-surface-tonal-a50)',
                 },
+                info: {
+                    a0: 'var(--color-info-a0)',
+                    a10: 'var(--color-info-a10)',
+                    a20: 'var(--color-info-a20)',
+                    a30: 'var(--color-info-a30)',
+                    a40: 'var(--color-info-a40)',
+                    a50: 'var(--color-info-a50)',
+                },
                 success: {
                     a0: 'var(--color-success-a0)',
                     a10: 'var(--color-success-a10)',
                     a20: 'var(--color-success-a20)',
                     a30: 'var(--color-success-a30)',
+                    a40: 'var(--color-success-a40)',
                     a50: 'var(--color-success-a50)',
                 },
                 danger: {
@@ -47,6 +56,7 @@ export default {
                     a10: 'var(--color-danger-a10)',
                     a20: 'var(--color-danger-a20)',
                     a30: 'var(--color-danger-a30)',
+                    a40: 'var(--color-danger-a40)',
                     a50: 'var(--color-danger-a50)',
                 },
             },

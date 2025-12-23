@@ -36,3 +36,12 @@ export const EMPTY_STATE_CONTENT: Record<
         description: 'you are all caught up 🎉',
     },
 };
+
+export const TOAST_MESSAGES = {
+    TODO_ADDED: 'Todo added successfully',
+    TODO_DELETED: 'Todo deleted successfully',
+    TODO_COMPLETED: 'Great job! Task completed',
+    TODO_PENDING: 'No worries — task marked as pending',
+    LIGHT_MODE_ENABLED: 'Light mode enabled',
+    DARK_MODE_ENABLED: 'Dark mode enabled',
+} as const;

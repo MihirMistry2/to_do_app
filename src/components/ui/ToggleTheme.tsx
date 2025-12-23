@@ -1,12 +1,22 @@
+import React from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa6';
 
 import useDarkMode from '@/hooks/useDarkMode';
+
+import { TOAST_MESSAGES } from '@/constants';
+import showToast from '@/utils/toast';
 
 const ToggleTheme: React.FC = (): React.ReactElement => {
     const { darkMode, setDarkMode } = useDarkMode();
 
     const handleThemeClick = () => {
         setDarkMode(!darkMode);
+
+        if (darkMode) {
+            showToast(TOAST_MESSAGES.LIGHT_MODE_ENABLED, 'light');
+        } else {
+            showToast(TOAST_MESSAGES.DARK_MODE_ENABLED, 'dark');
+        }
     };
 
     return (

@@ -1,9 +1,12 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { FaCheck, FaPlus, FaXmark } from 'react-icons/fa6';
 
 import IconButton from '@/components/ui/IconButton';
 
+import { TOAST_MESSAGES } from '@/constants';
 import type { TodoAddProps } from '@/types';
+
+import showToast from '@/utils/toast';
 
 const TodoAdd: React.FC<TodoAddProps> = ({
     isAddTodoOpen,
@@ -19,6 +22,8 @@ const TodoAdd: React.FC<TodoAddProps> = ({
 
         if (value) {
             addTodo(value);
+            showToast(TOAST_MESSAGES.TODO_ADDED, 'success');
+
             if (todoInputRef.current) {
                 todoInputRef.current.value = '';
             }
@@ -48,6 +53,7 @@ const TodoAdd: React.FC<TodoAddProps> = ({
                 className="h-9 w-full bg-transparent p-2 text-sm text-black outline-none sm:h-8 sm:py-1.5 dark:text-white"
                 placeholder="Add a new task..."
                 onKeyDown={handleKeyDown}
+                autoFocus={true}
             />
             <IconButton
                 className="bg-danger-a30 text-danger-a0 flex h-9 min-w-9 items-center justify-center rounded-full p-2 transition active:scale-[0.97] sm:h-8 sm:min-w-8 md:h-8 md:min-w-8"

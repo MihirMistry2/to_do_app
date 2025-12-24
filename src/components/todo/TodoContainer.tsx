@@ -3,7 +3,7 @@ import { EMPTY_STATE_CONTENT } from '@/constants';
 import EmptyState from '@/components/todo/EmptyState';
 import TodoList from '@/components/todo/TodoList';
 
-import type { Todo, TodoContainerProps } from '@/types';
+import type { TodoContainerProps } from '@/types';
 
 const TodoContainer: React.FC<TodoContainerProps> = ({
     activeFilter,
@@ -14,16 +14,10 @@ const TodoContainer: React.FC<TodoContainerProps> = ({
 }): React.ReactElement => {
     const { title, description } = EMPTY_STATE_CONTENT[activeFilter];
 
-    const filteredTodos = todos.filter((todo: Todo) => {
-        if (activeFilter === 'completed') return todo.completed;
-        if (activeFilter === 'pending') return !todo.completed;
-        return true;
-    });
-
-    return filteredTodos.length ? (
+    return todos.length ? (
         <TodoList
             isAddTodoOpen={isAddTodoOpen}
-            todos={filteredTodos}
+            todos={todos}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
         />

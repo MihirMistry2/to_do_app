@@ -19,6 +19,7 @@ const App = () => {
                 setIsAddTodoOpen={setIsAddTodoOpen}
             />
             <Main
+                search={search}
                 activeFilter={activeFilter}
                 setActiveFilter={setActiveFilter}
                 isAddTodoOpen={isAddTodoOpen}

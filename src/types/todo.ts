@@ -12,6 +12,7 @@ export interface Todo {
 }
 
 export interface MainProps {
+    search: string;
     activeFilter: Filter;
     setActiveFilter: Dispatch<React.SetStateAction<Filter>>;
     isAddTodoOpen: boolean;

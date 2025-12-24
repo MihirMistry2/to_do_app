@@ -61,7 +61,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
                 {title}
             </p>
             <button
-                className="bg-danger-a30 text-danger-a0 absolute top-1/2 right-1 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-sm p-1 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                className="bg-danger-a30 text-danger-a0 absolute top-1/2 right-1 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-sm p-1 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100"
                 onClick={() => handleDeleteClick(id)}
             >
                 <FaTrash className="text-base md:text-sm" />

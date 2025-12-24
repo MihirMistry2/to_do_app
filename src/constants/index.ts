@@ -24,16 +24,16 @@ export const EMPTY_STATE_CONTENT: Record<
     }
 > = {
     all: {
-        title: 'no tasks yet',
-        description: 'add your first task to get started',
+        title: 'No Tasks Yet',
+        description: 'Add Your First Task To Get Started',
     },
     completed: {
-        title: 'no completed tasks',
-        description: 'complete a task to see it here',
+        title: 'No Completed Tasks',
+        description: 'Complete A Task To See It Here',
     },
     pending: {
-        title: 'no pending tasks',
-        description: 'you are all caught up 🎉',
+        title: 'No Pending Tasks',
+        description: 'You Are All Caught Up 🎉',
     },
 };
 

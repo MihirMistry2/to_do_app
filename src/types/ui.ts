@@ -12,6 +12,7 @@ export interface SearchInputProps {
 }
 
 export interface EmptyStateProps {
+    icon: IconType;
     title: string;
     description: string;
 }

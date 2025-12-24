@@ -26,6 +26,7 @@ export interface TodoAddProps {
 }
 
 export interface TodoContainerProps {
+    search: string;
     activeFilter: Filter;
     isAddTodoOpen: boolean;
     todos: Todo[];

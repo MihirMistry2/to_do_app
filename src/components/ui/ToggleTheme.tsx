@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa6';
 
+import Tooltip from '@/components/ui/Tooltip';
+
 import useDarkMode from '@/hooks/useDarkMode';
 
 import { TOAST_MESSAGES } from '@/constants';
@@ -21,17 +23,24 @@ const ToggleTheme: React.FC = (): React.ReactElement => {
 
     return (
         <div>
-            <button
-                type="button"
-                onClick={handleThemeClick}
-                className="bg-surface-a20 dark:bg-surface-a20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition duration-200 ease-out outline-none active:scale-[0.97] md:h-8 md:w-8"
+            <Tooltip
+                content={
+                    darkMode ? 'Switch to light theme' : 'Switch to dark theme'
+                }
+                side="bottom"
             >
-                {darkMode ? (
-                    <FaSun className="text-base text-yellow-400 md:text-sm" />
-                ) : (
-                    <FaMoon className="text-base text-blue-500 md:text-sm" />
-                )}
-            </button>
+                <button
+                    type="button"
+                    onClick={handleThemeClick}
+                    className="bg-surface-a20 dark:bg-surface-a20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition duration-200 ease-out outline-none active:scale-[0.97] md:h-8 md:w-8"
+                >
+                    {darkMode ? (
+                        <FaSun className="text-base text-yellow-400 md:text-sm" />
+                    ) : (
+                        <FaMoon className="text-base text-blue-500 md:text-sm" />
+                    )}
+                </button>
+            </Tooltip>
         </div>
     );
 };

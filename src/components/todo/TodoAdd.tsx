@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { FaCheck, FaPlus, FaXmark } from 'react-icons/fa6';
 
+import Tooltip from '@/components/ui/Tooltip';
 import IconButton from '@/components/ui/IconButton';
 
 import { TOAST_MESSAGES } from '@/constants';
@@ -55,16 +56,20 @@ const TodoAdd: React.FC<TodoAddProps> = ({
                 onKeyDown={handleKeyDown}
                 autoFocus={true}
             />
-            <IconButton
-                className="bg-danger-a30 text-danger-a0 flex h-9 min-w-9 items-center justify-center rounded-full p-2 transition active:scale-[0.97] sm:h-8 sm:min-w-8 md:h-8 md:min-w-8"
-                icon={FaXmark}
-                onClick={handleCancelClick}
-            />
-            <IconButton
-                className="bg-success-a30 text-success-a0 flex h-9 min-w-9 items-center justify-center rounded-full p-2 transition active:scale-[0.97] sm:h-8 sm:min-w-8 md:h-8 md:min-w-8"
-                icon={FaCheck}
-                onClick={handleAddClick}
-            />
+            <Tooltip content="Cancel" side="bottom">
+                <IconButton
+                    className="bg-danger-a30 text-danger-a0 flex h-9 min-w-9 items-center justify-center rounded-full p-2 transition active:scale-[0.97] sm:h-8 sm:min-w-8 md:h-8 md:min-w-8"
+                    icon={FaXmark}
+                    onClick={handleCancelClick}
+                />
+            </Tooltip>
+            <Tooltip content="Add task" side="bottom">
+                <IconButton
+                    className="bg-success-a30 text-success-a0 flex h-9 min-w-9 items-center justify-center rounded-full p-2 transition active:scale-[0.97] sm:h-8 sm:min-w-8 md:h-8 md:min-w-8"
+                    icon={FaCheck}
+                    onClick={handleAddClick}
+                />
+            </Tooltip>
         </section>
     );
 };

@@ -37,26 +37,21 @@ const TodoItem: React.FC<TodoItemProps> = ({
 
     return (
         <div className="group border-surface-tonal-a30 relative flex w-full gap-4 border-b px-1 py-2 last:border-b-0">
-            <Tooltip
-                content={completed ? 'Mark as pending' : 'Mark as completed'}
-                side="bottom"
+            <label
+                className={clsx(
+                    'group/checkbox relative flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-[#c66be033] sm:h-7 sm:w-7 md:h-6 md:w-6',
+                    completed && 'bg-[#c66be033]',
+                )}
             >
-                <label
-                    className={clsx(
-                        'group/checkbox relative flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-[#c66be033] sm:h-7 sm:w-7 md:h-6 md:w-6',
-                        completed && 'bg-[#c66be033]',
-                    )}
-                >
-                    <input
-                        id={id}
-                        type="checkbox"
-                        checked={completed}
-                        onChange={() => handleToggleTodo(id)}
-                        className="peer border-surface-tonal-a30 checked:border-primary-a40 checked:bg-primary-a40 group-hover/checkbox:border-primary-a40 absolute h-5 w-5 cursor-pointer appearance-none rounded-sm border-2 sm:h-4 sm:w-4"
-                    />
-                    <FaCheck className="text-surface-tonal-a0 pointer-events-none absolute text-xs opacity-0 peer-checked:opacity-100 sm:text-sm" />
-                </label>
-            </Tooltip>
+                <input
+                    id={id}
+                    type="checkbox"
+                    checked={completed}
+                    onChange={() => handleToggleTodo(id)}
+                    className="peer border-surface-tonal-a30 checked:border-primary-a40 checked:bg-primary-a40 group-hover/checkbox:border-primary-a40 absolute h-5 w-5 cursor-pointer appearance-none rounded-sm border-2 sm:h-4 sm:w-4"
+                />
+                <FaCheck className="text-surface-tonal-a0 pointer-events-none absolute text-xs opacity-0 peer-checked:opacity-100 sm:text-sm" />
+            </label>
             <p
                 className={clsx(
                     'flex flex-1 items-center text-sm transition-all duration-200',

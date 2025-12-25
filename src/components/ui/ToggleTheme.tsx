@@ -24,7 +24,7 @@ const ToggleTheme: React.FC = (): React.ReactElement => {
             <button
                 type="button"
                 onClick={handleThemeClick}
-                className="md bg-surface-a20 dark:bg-surface-a20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition duration-200 ease-out outline-none active:scale-[0.97] md:h-8 md:w-8"
+                className="bg-surface-a20 dark:bg-surface-a20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition duration-200 ease-out outline-none active:scale-[0.97] md:h-8 md:w-8"
             >
                 {darkMode ? (
                     <FaSun className="text-base text-yellow-400 md:text-sm" />

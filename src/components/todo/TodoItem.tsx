@@ -33,8 +33,8 @@ const TodoItem: React.FC<TodoItemProps> = ({
         <div className="group border-surface-tonal-a30 relative mb-0 flex w-full gap-4 border-b px-1 py-2 last:border-b-0">
             <label
                 className={clsx(
-                    'group/checkbox relative flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-[#c66be033] sm:h-7 sm:w-7 md:h-6 md:w-6',
-                    completed && 'bg-[#c66be033]',
+                    'group/checkbox hover:bg-primary-a30-overlay relative flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-sm sm:h-7 sm:w-7 md:h-6 md:w-6',
+                    completed && 'bg-primary-a30-overlay',
                 )}
             >
                 <input

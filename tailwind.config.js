@@ -12,6 +12,7 @@ export default {
                     a30: 'var(--color-primary-a30)',
                     a40: 'var(--color-primary-a40)',
                     a50: 'var(--color-primary-a50)',
+                    'a30-overlay': 'var(--color-primary-a30-overlay)',
                 },
                 surface: {
                     a0: 'var(--color-surface-a0)',

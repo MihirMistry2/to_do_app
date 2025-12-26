@@ -44,7 +44,7 @@ const TodoAdd: React.FC<TodoAddProps> = ({
 
     return (
         <section className="border-surface-tonal-a30 bg-surface-tonal-a05 flex h-auto shrink-0 items-center gap-2 rounded-full border p-2">
-            <div className="text-primary-a40 flex h-9 min-w-9 items-center justify-center rounded-full bg-[#c66be033] p-2 sm:h-8 sm:min-w-8 md:h-8 md:min-w-8">
+            <div className="text-primary-a40 bg-primary-a30-overlay flex h-9 min-w-9 items-center justify-center rounded-full p-2 sm:h-8 sm:min-w-8 md:h-8 md:min-w-8">
                 <FaPlus className="text-base md:text-sm" />
             </div>
             <input

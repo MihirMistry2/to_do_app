@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { FaCheck, FaPlus, FaXmark } from 'react-icons/fa6';
 
-import Tooltip from '@/components/ui/Tooltip';
 import IconButton from '@/components/ui/IconButton';
 
 import { TOAST_MESSAGES } from '@/constants';

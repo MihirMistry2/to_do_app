@@ -1,58 +1,52 @@
 import { useEffect, useState } from 'react';
 
-import { type Todo, TODOS_STORAGE_KEY } from '@/types';
-
-const loadTodos = (): Todo[] => {
-    try {
-        const stored = localStorage.getItem(TODOS_STORAGE_KEY);
-        return stored ? (JSON.parse(stored) as Todo[]) : [];
-    } catch (error) {
-        return [];
-    }
-};
+import { type Todo } from '@/types';
+import todoService from '@/services/todo.service';
 
 const useTodos = () => {
-    const [todos, setTodos] = useState<Todo[]>(loadTodos);
-
-    const generateId = (): string => {
-        if (crypto?.randomUUID) return crypto.randomUUID();
-
-        return (
-            Math.random().toString(36).substring(2, 10) +
-            Date.now().toString(36)
-        );
-    };
+    const [todos, setTodos] = useState<Todo[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
-        localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos));
-    }, [todos]);
+        todoService
+            .getTodos()
+            .then(setTodos)
+            .catch(err => setError(err as Error))
+            .finally(() => setLoading(false));
+    }, []);
 
-    const addTodo = (title: string) => {
-        setTodos(prev => [
-            {
-                id: generateId(),
-                title,
-                completed: false,
-                createdAt: Date.now(),
-            },
-            ...prev,
-        ]);
+    const addTodo = async (title: string) => {
+        try {
+            const todos = await todoService.addTodo(title);
+            setTodos(todos);
+        } catch (error) {
+            setError(error as Error);
+        }
     };
 
-    const toggleTodo = (id: string) => {
-        setTodos(prev =>
-            prev.map(todo =>
-                todo.id === id ? { ...todo, completed: !todo.completed } : todo,
-            ),
-        );
+    const toggleTodo = async (id: string) => {
+        try {
+            const todos = await todoService.toggleTodo(id);
+            setTodos(todos);
+        } catch (error) {
+            setError(error as Error);
+        }
     };
 
-    const deleteTodo = (id: string) => {
-        setTodos(prev => prev.filter(todo => todo.id !== id));
+    const deleteTodo = async (id: string) => {
+        try {
+            const todos = await todoService.deleteTodo(id);
+            setTodos(todos);
+        } catch (error) {
+            setError(error as Error);
+        }
     };
 
     return {
         todos,
+        loading,
+        error,
         addTodo,
         toggleTodo,
         deleteTodo,

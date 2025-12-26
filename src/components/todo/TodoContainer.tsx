@@ -5,6 +5,7 @@ import { EMPTY_STATE_CONTENT } from '@/constants';
 
 import EmptyState from '@/components/todo/EmptyState';
 import TodoList from '@/components/todo/TodoList';
+import TodoListSkeleton from '@/components/skeleton/TodoList';
 
 import type { TodoContainerProps, Todo } from '@/types';
 
@@ -13,6 +14,7 @@ const TodoContainer: React.FC<TodoContainerProps> = ({
     activeFilter,
     isAddTodoOpen,
     todos,
+    loading,
     toggleTodo,
     deleteTodo,
 }): React.ReactElement => {
@@ -44,7 +46,9 @@ const TodoContainer: React.FC<TodoContainerProps> = ({
         });
     }, [todos, normalizedSearch, activeFilter]);
 
-    return filteredTodos.length ? (
+    return loading ? (
+        <TodoListSkeleton />
+    ) : filteredTodos.length ? (
         <TodoList
             isAddTodoOpen={isAddTodoOpen}
             todos={filteredTodos}

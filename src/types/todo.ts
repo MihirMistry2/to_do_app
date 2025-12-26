@@ -29,7 +29,16 @@ export interface TodoContainerProps {
     search: string;
     activeFilter: Filter;
     isAddTodoOpen: boolean;
+    loading: boolean;
     todos: Todo[];
+    toggleTodo: (id: string) => void;
+    deleteTodo: (id: string) => void;
+}
+
+export interface TodoItemProps {
+    id: string;
+    title: string;
+    completed: boolean;
     toggleTodo: (id: string) => void;
     deleteTodo: (id: string) => void;
 }

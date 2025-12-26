@@ -13,7 +13,8 @@ const Main: React.FC<MainProps> = ({
     isAddTodoOpen,
     setIsAddTodoOpen,
 }): React.ReactElement => {
-    const { todos, addTodo, toggleTodo, deleteTodo } = useTodos();
+    const { todos, loading, error, addTodo, toggleTodo, deleteTodo } =
+        useTodos();
 
     return (
         <main className="flex h-full flex-1 flex-col gap-y-6 overflow-hidden">
@@ -30,6 +31,7 @@ const Main: React.FC<MainProps> = ({
                 search={search}
                 activeFilter={activeFilter}
                 isAddTodoOpen={isAddTodoOpen}
+                loading={loading}
                 todos={todos}
                 toggleTodo={toggleTodo}
                 deleteTodo={deleteTodo}

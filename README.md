@@ -61,6 +61,12 @@ npm run dev
 <br>
 <br>
 
+## 🏗 Architecture
+
+- [View Architecture Documentation](./ARCHITECTURE.md)
+<br>
+<br>
+
 ## 🔗 Demo
 
 - [Click Here](https://mihirmistry2.github.io/to_do_app/) to see the live application and test it yourself.

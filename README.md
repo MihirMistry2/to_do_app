@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+![Application screenshot](./public/demo.gif)
+<br>
+<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# To-Do App
 
-Currently, two official plugins are available:
+A modern To-Do application built using **ReactJS**, **TypeScript**, and **Vite**.  
+Users can add, edit, and delete tasks, toggle dark mode, and organize their day efficiently with smooth animations and notifications.  
+<br>
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Getting Started
 
-## React Compiler
+- Make sure you already have `Node.js` and `npm` installed on your system.
+- Clone this repository to your local machine.
+- The app uses **Tailwind CSS** for styling and **react-hot-toast** for notifications.  
+<br>
+<br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚡ Install & Run
 
-## Expanding the ESLint configuration
+- Clone this repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/MihirMistry2/to_do_app.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+- Run the app in development mode:
+
+```bash
+npm run dev
+```
+<br>
+<br>
+
+## 📘 Used Libraries
+
+- `ReactJS`
+- `TypeScript`
+- `Vite`
+- `Tailwind CSS`
+- `clsx`
+- `react-hot-toast`
+- `react-icons`
+<br>
+<br>
+
+## 🛠 Features
+
+- Add, edit, and delete tasks
+- Toggle dark/light mode
+- Responsive design for all screen sizes
+- Smooth toast notifications for actions
+- Task organization and management
+<br>
+<br>
+
+## 🔗 Demo
+
+- [Click Here](https://mihirmistry2.github.io/to_do_app/) to see the live application and test it yourself.
+<br>
+<br>
+
+Thank You 🙂
+

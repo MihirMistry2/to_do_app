@@ -51,7 +51,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
             </label>
             <p
                 className={clsx(
-                    'flex flex-1 items-center text-sm transition-all duration-200',
+                    'flex flex-1 items-center text-sm transition-all duration-200 select-none',
                     completed
                         ? 'text-surface-tonal-a50 line-through'
                         : 'text-black dark:text-white',

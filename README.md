@@ -4,8 +4,10 @@
 
 # To-Do App
 
-A modern To-Do application built using **ReactJS**, **TypeScript**, and **Vite**.  
-Users can add, edit, and delete tasks, toggle dark mode, and organize their day efficiently with smooth animations and notifications.  
+A modern To-Do application built using **ReactJS**, **TypeScript**, and **Vite**.
+Users can add and delete tasks, mark tasks as completed, search tasks, filter them by status (All, Pending, Completed), and toggle dark mode.
+All user actions are accompanied by toast messages for instant feedback.
+Tasks are stored in the browser using localStorage, ensuring data persistence across page reloads.
 <br>
 <br>
 
@@ -53,11 +55,14 @@ npm run dev
 
 ## 🛠 Features
 
-- Add, edit, and delete tasks
-- Toggle dark/light mode
+- Add and delete tasks
+- Mark tasks as completed
+- Search tasks
+- Filter tasks by status (All, Pending, Completed)
+- Toggle dark / light mode
+- Persistent task storage using browser localStorage
 - Responsive design for all screen sizes
-- Smooth toast notifications for actions
-- Task organization and management
+- Toast notifications for user actions
 <br>
 <br>
 
